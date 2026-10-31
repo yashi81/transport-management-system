@@ -167,10 +167,6 @@ Possible future improvements include:
 - Advanced dashboards and reports
 - Cloud deployment
 
-## Documentation
-
-The complete project report is available in the `docs` folder.
-
 ## Author
 
 **Yashika Bhatia**
