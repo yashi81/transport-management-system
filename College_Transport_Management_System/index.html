@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Transport Management System</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        .header {
+            background-color: white;
+            text-align: center;
+            padding: 25px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header h1 {
+            margin: 0 0 12px 0;
+            color: red;
+            font-size: 34px;
+        }
+
+        .header h2 {
+            margin: 0;
+            color: #222;
+            font-size: 24px;
+        }
+
+        /* TOP INFORMATION */
+
+        .top-info {
+            background-color: #222;
+            color: white;
+            padding: 8px 20px;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            background-color: #990000;
+            padding: 13px 20px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(
+                rgba(153, 0, 0, 0.92),
+                rgba(120, 0, 0, 0.92)
+            );
+
+            color: white;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .hero h2 {
+            margin: 0 0 18px 0;
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin: 10px auto 25px auto;
+            max-width: 750px;
+            line-height: 1.6;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: white;
+            color: #990000;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-btn:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            width: 95%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        /* INTRODUCTION */
+
+        .intro-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro-box h2 {
+            color: #990000;
+            margin-top: 0;
+        }
+
+        .intro-box p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* CARDS */
+
+        .section-title {
+            text-align: center;
+            color: #990000;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 28px 22px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #990000;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            min-height: 70px;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background-color: #990000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .card-btn:hover {
+            background-color: #770000;
+        }
+
+        /* FEATURES */
+
+        .features {
+            background-color: white;
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #990000;
+            margin-top: 0;
+        }
+
+        .features ul {
+            max-width: 750px;
+            margin: auto;
+            line-height: 2;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 40px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .header h2 {
+                font-size: 19px;
+            }
+
+            .navbar a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .top-info {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <h1>
+        INDIRA GANDHI NATIONAL OPEN UNIVERSITY (IGNOU)
+    </h1>
+
+    <h2>
+        COLLEGE TRANSPORT MANAGEMENT SYSTEM
+    </h2>
+
+</div>
+
+
+<!-- TOP INFORMATION -->
+
+<div class="top-info">
+
+    Email:
+    <a href="mailto:ssc@ignou.ac.in"
+       style="color:white; text-decoration:none;">
+        ssc@ignou.ac.in
+    </a>
+
+    &nbsp; | &nbsp;
+
+    Phone:
+    011-29572513, 011-29572514
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="aboutus/Home.html">About Us</a>
+
+    <a href="log.php">Student Login</a>
+
+    <a href="regis.php">Student Registration</a>
+
+    <a href="ad.php">Admin</a>
+
+    <a href="strouteinfo.php">Routes</a>
+
+    <a href="contactus/contect.html">Contact Us</a>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h2>
+        Welcome to College Transport Management System
+    </h2>
+
+    <p>
+        A centralized web-based system for managing
+        student transportation, routes, buses, drivers,
+        registrations, trips and payments.
+    </p>
+
+    <a href="regis.php" class="hero-btn">
+        Student Registration
+    </a>
+
+    <a href="log.php" class="hero-btn">
+        Student Login
+    </a>
+
+</section>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro-box">
+
+        <h2>
+            About the System
+        </h2>
+
+        <p>
+            The College Transport Management System provides
+            an organized platform for managing college
+            transportation services. Students can view
+            available routes and buses, register for transport,
+            make payment records and view their transport
+            information.
+        </p>
+
+        <p>
+            Administrators can manage students, drivers,
+            buses, routes, trips, transport registrations
+            and payment records through a centralized system.
+        </p>
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <h2 class="section-title">
+        System Facilities
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>
+                Student Services
+            </h3>
+
+            <p>
+                Register as a student, login to your account
+                and manage your transport information.
+            </p>
+
+            <a href="regis.php" class="card-btn">
+                Student Registration
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Transport Routes
+            </h3>
+
+            <p>
+                View the available transport routes and
+                their starting points and destinations.
+            </p>
+
+            <a href="strouteinfo.php" class="card-btn">
+                View Routes
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Transport Buses
+            </h3>
+
+            <p>
+                View available buses along with bus and
+                driver information.
+            </p>
+
+            <a href="businfo.php" class="card-btn">
+                View Buses
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Transport Registration
+            </h3>
+
+            <p>
+                Registered students can apply for
+                college transport services.
+            </p>
+
+            <a href="log.php" class="card-btn">
+                Student Login
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Administration
+            </h3>
+
+            <p>
+                Administrators can manage students, buses,
+                routes, drivers, trips and payments.
+            </p>
+
+            <a href="ad.php" class="card-btn">
+                Admin Login
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+                Find the contact information and official
+                Student Service Centre details.
+            </p>
+
+            <a href="contactus/contect.html" class="card-btn">
+                Contact Us
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- FEATURES -->
+
+    <div class="features">
+
+        <h2>
+            Major Features
+        </h2>
+
+        <ul>
+
+            <li>Student Registration and Secure Login</li>
+
+            <li>Route and Bus Information</li>
+
+            <li>Transport Registration Management</li>
+
+            <li>Transport Payment Records</li>
+
+            <li>Driver and Bus Management</li>
+
+            <li>Route and Trip Management</li>
+
+            <li>Transport Registration Approval</li>
+
+            <li>Administrative Reports</li>
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    <div>
+
+        <a href="index.html">Home</a>
+
+        <a href="aboutus/Home.html">About Us</a>
+
+        <a href="strouteinfo.php">Routes</a>
+
+        <a href="contactus/contect.html">Contact Us</a>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 College Transport Management System.
+        All Rights Reserved.
+
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
